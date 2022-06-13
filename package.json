@@ -7,11 +7,11 @@
   "scripts": {
     "build": "npm run clean && npm run build:spec && npm run generate-clients && npm run build:docs",
     "build:spec": "node scripts/build.js",
-    "build:docs": "cd build/docs/gatsby && npm install && npm run build",
+    "build:docs": "cd build/docs/gatsby && npm install --legacy-peer-deps && npm run build",
     "lint": "node scripts/build.js && node scripts/validate.js && node scripts/graphql-validate.js",
     "clean": "rm -rf build && mkdir -p build",
     "generate-clients": "open-rpc-generator generate -c open-rpc-generator-config.json",
-    "deploy": "npm run build && cd build/docs/gatsby && gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/ethereum/execution-apis.git",
+    "deploy": "npm run build && cd build/docs/gatsby && gatsby build --prefix-paths",
     "graphql:schema": "node scripts/graphql.js",
     "graphql:validate": "node scripts/graphql-validate.js"
   },
