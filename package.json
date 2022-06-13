@@ -11,7 +11,7 @@
     "lint": "node scripts/build.js && node scripts/validate.js && node scripts/graphql-validate.js",
     "clean": "rm -rf build && mkdir -p build",
     "generate-clients": "open-rpc-generator generate -c open-rpc-generator-config.json",
-    "publish": "npm run publish:typescript && npm run publish:rust",
+    "deploy": "npm run build && cd build/docs/gatsby && gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/ethereum/execution-apis.git",
     "graphql:schema": "node scripts/graphql.js",
     "graphql:validate": "node scripts/graphql-validate.js"
   },

@@ -1,4 +1,5 @@
 node_modules/
+build/
 openrpc.json
 refs-openrpc.json
 data.json
