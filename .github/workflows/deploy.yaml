@@ -2,6 +2,10 @@ name: Deploy specification
 
 on: [push, pull_request, workflow_dispatch]
 
+env:
+  NODE_OPTIONS=--max_old_space_size=20480
+
+
 jobs:
   deploy-spec:
     runs-on: ubuntu-latest
