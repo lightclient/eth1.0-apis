@@ -1,9 +1,6 @@
 name: Deploy specification
 
-on:
-  push:
-    branches:
-      - deploy-to-gh-pages
+on: [push]
 
 jobs:
   deploy-spec:
