@@ -5,7 +5,8 @@
       required: true
       schema:
         $ref: '#/components/schemas/hash32'
-    - name: Hydrated transactions
+    - name: Full block
+      description: If set, the block response will contain the full transaction and withdrawal objects. If not set, only transaction hashes are provided and withdrawals are ommitted completely.
       required: true
       schema:
         title: hydrated
@@ -21,7 +22,8 @@
       required: true
       schema:
         $ref: '#/components/schemas/BlockNumberOrTag'
-    - name: Hydrated transactions
+    - name: Full block
+      description: If set, the block response will contain the full transaction and withdrawal objects. If not set, only transaction hashes are provided and withdrawals are ommitted completely.
       required: true
       schema:
         title: hydrated
